@@ -192,6 +192,58 @@
             color: #8ed1ff;
             margin-bottom: 8px;
         }
+
+        .footer_col h4 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer_links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer_links li {
+            margin-bottom: 8px;
+        }
+
+        .footer_links a {
+            color: #e6e6e6;
+            text-decoration: none;
+        }
+
+        .footer_links a:hover {
+            color: #ffffff;
+        }
+
+        .social_box {
+            margin-top: 15px;
+        }
+
+        .social_box a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: #fff;
+        }
+
+        .bottom_bar {
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -233,13 +285,13 @@
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
 
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="about.html">About</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="why.html">Why Us</a>
-                            </li>
+                            </li> -->
 
                             <li class="nav-item">
                                 <a class="nav-link" href="careers.html">Careers</a>
@@ -442,75 +494,83 @@
 
             <div class="row">
 
-                <div class="col-md-3">
+                <!-- Company Links -->
+                <div class="col-md-3 footer_col">
 
-                    <h4>STAY CONNECTED</h4>
+                    <h4>Company Links</h4>
 
-                    <form class="subscribe_form">
+                    <ul class="footer_links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
 
-                        <input type="email" placeholder="Enter Your Email">
+                </div>
 
-                        <button>Subscribe</button>
 
-                    </form>
+                <!-- Useful Links -->
+                <div class="col-md-3 footer_col">
 
-                    <div class="social_box mt-3">
+                    <h4>Useful Links</h4>
+
+                    <ul class="footer_links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Term & Conditions</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact Info -->
+                <div class="col-md-4 footer_col">
+
+                    <h4>Contact Info</h4>
+
+                    <p>
+                        ParkVault Pvt Ltd, 64, 27th Main Road <br>
+                        Chittoor, Andhra Pradesh <br>
+                        India
+                    </p>
+
+                </div>
+
+
+                <!-- Social -->
+                <div class="col-md-2 footer_col text-center">
+
+                    <h4>Stay Connected</h4>
+
+                    <div class="social_box">
 
                         <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <div class="col-md-3">
 
-                    <h4>ABOUT US</h4>
+            <hr>
 
-                    <p>
 
-                        ParkVault is built to simplify urban parking. We help drivers quickly find reliable parking
-                        spaces, reserve in advance, and move with confidence. With smart technology, transparent
-                        pricing, and real-time availability, we make parking effortless for everyone.
+            <div class="row bottom_bar">
 
-                    </p>
-
+                <div class="col-md-4">
+                    <p>Copyright © <span id="displayYear"></span> ParkVault</p>
                 </div>
 
-
-                <div class="col-md-3">
-
-                    <h4>ONLINE BOOKING</h4>
-
-                    <p>
-
-                        Book your parking spot in seconds. Choose your location, select a slot, and confirm your
-                        reservation instantly. With secure online payments and real-time updates, ParkVault ensures a
-                        smooth and hassle-free parking experience every time.
-
-                    </p>
-
+                <div class="col-md-4 text-center">
+                    <i class="fa fa-envelope"></i> contact@parkvault.in
                 </div>
 
-
-                <div class="col-md-3">
-
-                    <h4>CONTACT US</h4>
-
-                    <strong>ParkVault</strong>
-
-                    <p>We’re here to assist you with bookings, support, and general enquiries.</p>
-
-                    <div class="contact_link_box">
-
-                        <a href="#"><i class="fa fa-map-marker"></i> Chittoor, A.P.</a>
-                        <a href="tel:+919390808841"><i class="fa fa-phone"></i> +91 9390808841</a>
-                        <a href="mailto:contact@parkvault.in"><i class="fa fa-envelope"></i> contact@parkvault.in</a>
-
-                    </div>
-
+                <div class="col-md-4 text-right">
+                    <i class="fa fa-phone"></i> +91 9390808841
                 </div>
 
             </div>
