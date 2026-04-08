@@ -244,6 +244,115 @@
         .text-center {
             text-align: center;
         }
+
+
+        /* FOOTER TITLE ANIMATION */
+
+        .footer_title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer_title::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            background: #ff6b3d ;
+            left: 0;
+            bottom: -6px;
+            transition: 0.4s;
+        }
+
+        .footer_col:hover .footer_title::after {
+            width: 100%;
+        }
+
+        /* FOOTER LINKS */
+
+        .footer_links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer_links li {
+            margin-bottom: 8px;
+        }
+
+        .footer_links a {
+            color: #e6e6e6;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .footer_links a:hover {
+            transform: translateX(6px);
+            color: #ffffff;
+        }
+
+        /* SOCIAL ICON ANIMATION */
+
+        .social_box a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 40px;
+            /* margin-right: 10px; */
+            margin-left: 10px;
+            color: #fff;
+            transition: 0.4s;
+        }
+
+        .social_box a:hover {
+            background: #fff;
+            color: #1e5a63;
+            transform: translateY(-6px) scale(1.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CONTACT BOX FADE */
+
+        .contact_box p {
+            animation: fadeText 2s ease;
+        }
+
+        @keyframes fadeText {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* BOTTOM BAR ICON HOVER */
+
+        .contact_item {
+            transition: 0.3s;
+        }
+
+        .contact_item:hover {
+            color: #ff6b3d;
+            transform: translateY(-2px);
+        }
+
+        /* COLUMN HOVER EFFECT */
+
+        .footer_col {
+            transition: 0.3s;
+        }
+
+        .footer_col:hover {
+            transform: translateY(-5px);
+        }
+
     </style>
 
 </head>
@@ -492,27 +601,27 @@
 
         <div class="container">
 
-            <div class="row">
+            <div class="row footer_row">
 
                 <!-- Company Links -->
-                <div class="col-md-3 footer_col">
+                <div class="col-md-3 footer_col" data-aos="fade-up">
 
-                    <h4>Company Links</h4>
+                    <h4 class="footer_title">Company Links</h4>
 
                     <ul class="footer_links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
 
                 </div>
 
 
                 <!-- Useful Links -->
-                <div class="col-md-3 footer_col">
+                <div class="col-md-3 footer_col" data-aos="fade-up" data-aos-delay="150">
 
-                    <h4>Useful Links</h4>
+                    <h4 class="footer_title">Useful Links</h4>
 
                     <ul class="footer_links">
                         <li><a href="#">Privacy Policy</a></li>
@@ -524,9 +633,9 @@
 
 
                 <!-- Contact Info -->
-                <div class="col-md-4 footer_col">
+                <div class="col-md-4 footer_col contact_box" data-aos="fade-up" data-aos-delay="300">
 
-                    <h4>Contact Info</h4>
+                    <h4 class="footer_title">Contact Info</h4>
 
                     <p>
                         ParkVault Pvt Ltd, 64, 27th Main Road <br>
@@ -538,16 +647,15 @@
 
 
                 <!-- Social -->
-                <div class="col-md-2 footer_col text-center">
+                <div class="col-md-2 footer_col text-center" data-aos="fade-up" data-aos-delay="450">
 
-                    <h4>Stay Connected</h4>
+                    <h4 class="footer_title">Stay Connected</h4>
 
                     <div class="social_box">
 
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-youtube"></i></a>
 
                     </div>
 
@@ -565,11 +673,11 @@
                     <p>Copyright © <span id="displayYear"></span> ParkVault</p>
                 </div>
 
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center contact_item">
                     <i class="fa fa-envelope"></i> contact@parkvault.in
                 </div>
 
-                <div class="col-md-4 text-right">
+                <div class="col-md-4 text-right contact_item">
                     <i class="fa fa-phone"></i> +91 9390808841
                 </div>
 
@@ -603,7 +711,7 @@
     <script>
 
         AOS.init({
-            duration: 1000,
+            duration: 1500,
             once: true
         });
 
