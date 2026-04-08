@@ -1,0 +1,27 @@
+Terms of Use :
+----------------
+Service Level Agreement
+
+1. USER ELIGIBILITY Services are available only to persons who can form legally
+binding contracts under the Indian Contract Act, 1872. You are responsible for maintaining
+the confidentiality of your account credentials and for all activities that occur under your
+account.
+
+2. THE BOOKING CONTRACT A confirmed booking constitutes a time-bound license to
+utilize a specific parking slot. This license is valid strictly for the Date, Start Time, and End
+Time specified on the digital QR Ticket.
+
+3. FEES AND STATUTORY TAXES
+ Platform Fee: A non-refundable 15% Booking Charge is applied for the digital
+facilitation and reservation services.
+ GST: All transactions are subject to 18% GST (9% CGST + 9% SGST) in
+accordance with prevailing tax laws.
+
+4. ON-SITE VERIFICATION Access to the designated premises is contingent upon a
+successful scan of the digital QR code by a ParkVault supervisor. Entry may be denied if
+vehicle details do not match the digital record or if the user fails to provide valid governmentissued identification upon request.
+
+5. LIMITATION OF LIABILITY ParkVault operates as an intermediary aggregator. We
+do not own or manage the physical parking premises. Consequently, the Company is not
+liable for any vehicle theft, physical damage, or loss of personal belongings occurring within
+third-party premises.
