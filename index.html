@@ -439,6 +439,102 @@ margin-bottom:40px;
 }
 
 }
+
+/* ===== SMART FEATURES SECTION ===== */
+
+.features_section{
+background:#f9f9f9;
+padding:80px 0;
+}
+
+/* HEADING */
+
+.features_section h2{
+font-weight:700;
+color:#1e5a63;
+margin-bottom:10px;
+}
+
+.features_section p{
+color:#555;
+margin-bottom:40px;
+}
+
+/* FEATURE LIST */
+
+.feature_list{
+list-style:none;
+padding:0;
+margin-top:20px;
+}
+
+.feature_list li{
+font-size:17px;
+margin-bottom:18px;
+color:#333;
+display:flex;
+align-items:center;
+transition:0.3s;
+}
+
+/* CHECK ICON */
+
+.check_icon{
+display:inline-block;
+width:28px;
+height:28px;
+line-height:28px;
+text-align:center;
+border-radius:50%;
+background:#1e5a63;
+color:white;
+margin-right:12px;
+font-weight:bold;
+transition:0.3s;
+}
+
+/* HOVER EFFECT */
+
+.feature_list li:hover{
+transform:translateX(8px);
+color:#1e5a63;
+}
+
+.feature_list li:hover .check_icon{
+background:#ff6b3d;
+transform:scale(1.2);
+}
+
+/* IMAGE BOX */
+
+.feature_img_box{
+overflow:hidden;
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+
+.feature_img_box img{
+width:100%;
+transition:transform .6s ease;
+}
+
+/* IMAGE HOVER ZOOM */
+
+.feature_img_box:hover img{
+transform:scale(1.08);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.feature_list{
+margin-bottom:30px;
+}
+
+}
     </style>
 
 </head>
@@ -766,7 +862,81 @@ margin-bottom:40px;
     </section>
 
 
-    
+    <!-- ===== SMART FEATURES SECTION ===== -->
+
+<section class="features_section layout_padding">
+
+<div class="container">
+
+<div class="heading_container text-center" data-aos="fade-up">
+
+<h2>Smart Parking Features</h2>
+
+<p>
+ParkVault uses intelligent technology to deliver a smarter parking experience.
+</p>
+
+</div>
+
+<div class="row align-items-center">
+
+<!-- FEATURES LIST -->
+
+<div class="col-md-6" data-aos="fade-right">
+
+<ul class="feature_list">
+
+<li>
+<span class="check_icon">✓</span>
+Real-time parking availability
+</li>
+
+<li>
+<span class="check_icon">✓</span>
+Instant parking reservation
+</li>
+
+<li>
+<span class="check_icon">✓</span>
+Secure online payment system
+</li>
+
+<li>
+<span class="check_icon">✓</span>
+Easy mobile-friendly booking
+</li>
+
+<li>
+<span class="check_icon">✓</span>
+Accurate navigation to parking spots
+</li>
+
+<li>
+<span class="check_icon">✓</span>
+Transparent pricing with no hidden fees
+</li>
+
+</ul>
+
+</div>
+
+<!-- IMAGE -->
+
+<div class="col-md-6" data-aos="fade-left">
+
+<div class="feature_img_box">
+
+<img src="images/about-img.jpg" alt="Parking Image">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
     <section class="info_section">
