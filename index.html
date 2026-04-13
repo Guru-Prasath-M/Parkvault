@@ -5,6 +5,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ParkVault is a smart parking reservation platform that helps drivers find and book parking spaces easily using real-time availability and secure online booking." />
 
     <title>ParkVault</title>
 
@@ -352,6 +353,92 @@
         .footer_col:hover {
             transform: translateY(-5px);
         }
+
+
+        /* ===== HOW IT WORKS SECTION ===== */
+
+.how_section{
+background:#f9f9f9;
+padding:80px 0;
+}
+
+/* CARD DESIGN */
+
+.how_box{
+background:#ffffff;
+padding:40px 25px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+transition:all .4s ease;
+position:relative;
+margin-top:40px;
+}
+
+.how_box:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* STEP NUMBER BADGE */
+
+.step_number{
+position:absolute;
+top:-15px;
+left:50%;
+transform:translateX(-50%);
+background:#1e5a63;
+color:white;
+width:40px;
+height:40px;
+line-height:40px;
+border-radius:50%;
+font-weight:bold;
+font-size:18px;
+}
+
+/* ICON */
+
+.how_box .img-box{
+margin-bottom:20px;
+}
+
+.how_box .img-box img{
+width:80px;
+transition:transform .4s ease;
+}
+
+/* ICON ANIMATION */
+
+.how_box:hover img{
+transform:scale(1.15) rotate(5deg);
+}
+
+/* TITLE */
+
+.how_box h4{
+font-size:20px;
+font-weight:600;
+margin-bottom:10px;
+color:#1e5a63;
+}
+
+/* TEXT */
+
+.how_box p{
+font-size:14px;
+color:#555;
+line-height:1.6;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.how_box{
+margin-bottom:40px;
+}
+
+}
     </style>
 
 </head>
@@ -517,6 +604,89 @@
     </section>
 
 
+    <!-- ===== HOW IT WORKS SECTION ===== -->
+
+<section class="how_section layout_padding">
+
+  <div class="container">
+
+    <div class="heading_container text-center" data-aos="fade-up">
+      <h2>How ParkVault Works</h2>
+      <p>Parking made simple in just three easy steps.</p>
+    </div>
+
+    <div class="row text-center">
+
+      <!-- STEP 1 -->
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="how_box">
+
+          <div class="step_number">1</div>
+
+          <div class="img-box">
+            <img src="images/w1.png" alt="">
+          </div>
+
+          <h4>Search Location</h4>
+
+          <p>
+            Enter your destination and instantly discover available parking
+            spaces near you.
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- STEP 2 -->
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="how_box">
+
+          <div class="step_number">2</div>
+
+          <div class="img-box">
+            <img src="images/w2.png" alt="">
+          </div>
+
+          <h4>Reserve Your Spot</h4>
+
+          <p>
+            Select the parking space you want and reserve it before arriving.
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- STEP 3 -->
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+        <div class="how_box">
+
+          <div class="step_number">3</div>
+
+          <div class="img-box">
+            <img src="images/w3.png" alt="">
+          </div>
+
+          <h4>Park Stress-Free</h4>
+
+          <p>
+            Navigate directly to your reserved spot and park without wasting time.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
     <section class="why_section layout_padding-bottom">
 
         <div class="container">
@@ -594,6 +764,9 @@
         </div>
 
     </section>
+
+
+    
 
 
     <section class="info_section">
