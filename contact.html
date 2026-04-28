@@ -37,62 +37,613 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+
+
+<style>
+        /* ===== NAVBAR LOGO BIGGER ===== */
+
+        .navbar-logo {
+            height: 70px;
+            width: auto;
+            margin-right: 2px;
+            transition: transform .3s ease;
+        }
+
+        .navbar-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-text {
+            color: #ffffff;
+            font-size: 26px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        /* ===== STICKY NAVBAR ===== */
+
+        .header_section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background-color: #1e5a63 !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #8ed1ff !important;
+        }
+
+        .hero_area {
+            padding-top: 90px;
+        }
+
+        /* HERO LOGO CENTER */
+
+        .hero-logo-center {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .hero-logo-center img {
+            width: 220px;
+            max-width: 80%;
+            animation: floatLogo 4s ease-in-out infinite;
+        }
+
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+
+        /* COMING SOON BADGE */
+
+        .coming-soon-badge {
+            margin-top: 12px;
+            font-size: 12px;
+            padding: 6px 22px;
+            color: white;
+            background: linear-gradient(135deg, #155263, #2bb673);
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* HERO TEXT */
+
+        .slider_section .detail-box {
+            text-align: center;
+        }
+
+        /* CARD HOVER */
+
+        .why_section .box {
+            transition: all .4s ease;
+        }
+
+        .why_section .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* IMAGE ZOOM */
+
+        .img-box img {
+            transition: transform .5s ease;
+        }
+
+        .img-box img:hover {
+            transform: scale(1.05);
+        }
+
+        /* INFO SECTION */
+
+        .info_section {
+            background: #1e5a63;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .info_section h4 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .info_section p {
+            color: #e6e6e6;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .subscribe_form input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .subscribe_form button {
+            width: 100%;
+            padding: 10px;
+            background: #ff6b3d;
+            border: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .social_box a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: #fff;
+        }
+
+        .contact_link_box a {
+            display: block;
+            color: #8ed1ff;
+            margin-bottom: 8px;
+        }
+
+        .footer_col h4 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer_links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer_links li {
+            margin-bottom: 8px;
+        }
+
+        .footer_links a {
+            color: #e6e6e6;
+            text-decoration: none;
+        }
+
+        .footer_links a:hover {
+            color: #ffffff;
+        }
+
+        .social_box {
+            margin-top: 15px;
+        }
+
+        .social_box a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: #fff;
+        }
+
+        .bottom_bar {
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+
+        /* FOOTER TITLE ANIMATION */
+
+        .footer_title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer_title::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            background: #ff6b3d;
+            left: 0;
+            bottom: -6px;
+            transition: 0.4s;
+        }
+
+        .footer_col:hover .footer_title::after {
+            width: 100%;
+        }
+
+        /* FOOTER LINKS */
+
+        .footer_links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer_links li {
+            margin-bottom: 8px;
+        }
+
+        .footer_links a {
+            color: #e6e6e6;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .footer_links a:hover {
+            transform: translateX(6px);
+            color: #ffffff;
+        }
+
+        /* SOCIAL ICON ANIMATION */
+
+        .social_box a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 40px;
+            /* margin-right: 10px; */
+            margin-left: 10px;
+            color: #fff;
+            transition: 0.4s;
+        }
+
+        .social_box a:hover {
+            background: #fff;
+            color: #1e5a63;
+            transform: translateY(-6px) scale(1.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CONTACT BOX FADE */
+
+        .contact_box p {
+            animation: fadeText 2s ease;
+        }
+
+        @keyframes fadeText {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* BOTTOM BAR ICON HOVER */
+
+        .contact_item {
+            transition: 0.3s;
+        }
+
+        .contact_item:hover {
+            color: #ff6b3d;
+            transform: translateY(-2px);
+        }
+
+        /* COLUMN HOVER EFFECT */
+
+        .footer_col {
+            transition: 0.3s;
+        }
+
+        .footer_col:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* ===== HOW IT WORKS SECTION ===== */
+
+        .how_section {
+            background: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        /* CARD DESIGN */
+
+        .how_box {
+            background: #ffffff;
+            padding: 40px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all .4s ease;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .how_box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* STEP NUMBER BADGE */
+
+        .step_number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e5a63;
+            color: white;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* ICON */
+
+        .how_box .img-box {
+            margin-bottom: 20px;
+        }
+
+        .how_box .img-box img {
+            width: 80px;
+            transition: transform .4s ease;
+        }
+
+        /* ICON ANIMATION */
+
+        .how_box:hover img {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        /* TITLE */
+
+        .how_box h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1e5a63;
+        }
+
+        /* TEXT */
+
+        .how_box p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px) {
+
+            .how_box {
+                margin-bottom: 40px;
+            }
+
+        }
+
+        /* ===== SMART FEATURES SECTION ===== */
+
+        .features_section {
+            background: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        /* HEADING */
+
+        .features_section h2 {
+            font-weight: 700;
+            color: #1e5a63;
+            margin-bottom: 10px;
+        }
+
+        .features_section p {
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* FEATURE LIST */
+
+        .feature_list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .feature_list li {
+            font-size: 17px;
+            margin-bottom: 18px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        /* CHECK ICON */
+
+        .check_icon {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            background: #1e5a63;
+            color: white;
+            margin-right: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* HOVER EFFECT */
+
+        .feature_list li:hover {
+            transform: translateX(8px);
+            color: #1e5a63;
+        }
+
+        .feature_list li:hover .check_icon {
+            background: #ff6b3d;
+            transform: scale(1.2);
+        }
+
+        /* IMAGE BOX */
+
+        .feature_img_box {
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* IMAGE */
+
+        .feature_img_box img {
+            width: 100%;
+            transition: transform .6s ease;
+        }
+
+        /* IMAGE HOVER ZOOM */
+
+        .feature_img_box:hover img {
+            transform: scale(1.08);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px) {
+
+            .feature_list {
+                margin-bottom: 30px;
+            }
+
+        }
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
-<body class="sub_page">
+<div class="hero_area">
 
-  <div class="hero_area">
-    <div class="bg-box">
-      <img src="images/slider-bg.jpg" alt="">
-    </div>
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              ParkVault
-            </span>
-          </a>
+        <div class="bg-box">
+            <img src="images/slider-bg.jpg" alt="">
+        </div>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
+        <header class="header_section">
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home </a>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="why.html">Why Us</a>
-              </li> -->
+            <div class="container">
 
-              <li class="nav-item">
-                <a class="nav-link" href="careers.html">Careers</a>
-              </li>
+                <nav class="navbar navbar-expand-lg custom_nav-container">
 
-              <li class="nav-item active">
-                <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span></a>
-              </li>
+                    <a class="navbar-brand">
 
-            </ul>
-            <form class="form-inline">
-              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
+                        <img src="images/logo.png" class="navbar-logo">
+
+                        <span class="brand-text">ParkVault</span>
+
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent">
+
+                        <span></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="why.html">Why Us</a>
+                            </li> -->
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="careers.html">Careers</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </nav>
+
+            </div>
+
+        </header>
 
 
 
@@ -127,105 +678,115 @@
 
 <!-- Footer Section -->
 
-  <section class="info_section">
+ <section class="info_section">
 
-    <div class="container">
+        <div class="container">
 
-      <div class="row footer_row">
+            <div class="row footer_row">
 
-        <!-- Company Links -->
-        <div class="col-md-3 footer_col" data-aos="fade-up">
+                <div class="col-md-3 footer_col" data-aos="fade-up">
 
-          <h4 class="footer_title">Company Links</h4>
+                    <h4 class="footer_title">Company Links</h4>
 
-          <ul class="footer_links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
+                    <ul class="footer_links">
+                        <li><a href="index.html">Home</a></li>
+                        
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-3 footer_col" data-aos="fade-up" data-aos-delay="150">
+
+                    <h4 class="footer_title">Useful Links</h4>
+
+                    <ul class="footer_links">
+                        <li><a href="documents/parkvault-PrivacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                        <li><a href="documents/parkvault-Terms.html" target="_blank">Term & Conditions</a></li>
+                        <li><a href="documents/parkvault-RefundPolicy.html" target="_blank">Return Policy</a></li>
+                        <li><a href="documents/PV udyam certificate.pdf" target="_blank">Udyam Certificate</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-4 footer_col contact_box" data-aos="fade-up" data-aos-delay="300">
+
+                    <h4 class="footer_title">Contact Info</h4>
+
+                    <p>
+                        ParkVault Pvt Ltd,<br>
+                        15-906, VinayakaPuram <br>
+                        Chittoor, Andhra Pradesh <br>
+                        India
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-2 footer_col text-center" data-aos="fade-up" data-aos-delay="450">
+
+                    <h4 class="footer_title">Stay Connected</h4>
+
+                    <div class="social_box">
+
+                        <a href="https://www.facebook.com/ParkVaultOfficial/"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/parkvaultofficial/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/parkvault-private-limited/"><i class="fa fa-linkedin"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="row bottom_bar">
+
+
+                <div class="col-md-5 text-center contact_item">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto: contact@parkvault.in" style="color: inherit; text-decoration: none;">
+                        contact@parkvault.in
+                    </a>
+                </div>
+
+                <div class="col-md-5 text-right contact_item">
+                    <i class="fa fa-phone"></i>
+                    <a href="tele: +91 9390808841" style="color: inherit; text-decoration: none;">
+                        +91 9390808841
+                    </a>
+                </div>
+            </div>
 
         </div>
 
-
-        <!-- Useful Links -->
-        <div class="col-md-3 footer_col" data-aos="fade-up" data-aos-delay="150">
-
-          <h4 class="footer_title">Useful Links</h4>
-
-          <ul class="footer_links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Term & Conditions</a></li>
-            <li><a href="#">Return Policy</a></li>
-          </ul>
-
-        </div>
+    </section>
 
 
-        <!-- Contact Info -->
-        <div class="col-md-4 footer_col contact_box" data-aos="fade-up" data-aos-delay="300">
 
-          <h4 class="footer_title">Contact Info</h4>
+<footer class="footer_section">
 
-          <p>
-            ParkVault Pvt Ltd, 64, 27th Main Road <br>
-            Chittoor, Andhra Pradesh <br>
-            India
-          </p>
+        <div class="container">
+
+            <p><a href="https://octo-corp.github.io/octo-corp/">
+
+
+                © <span id="displayYear"></span> All Rights Reserved By OctoCorp Solutions
+
+            </a></p>
 
         </div>
 
-
-        <!-- Social -->
-        <div class="col-md-2 footer_col text-center" data-aos="fade-up" data-aos-delay="450">
-
-          <h4 class="footer_title">Stay Connected</h4>
-
-          <div class="social_box">
-
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-
-          </div>
-
-        </div>
-
-      </div>
+    </footer>
 
 
-      <hr>
-
-
-      <div class="row bottom_bar">
-
-        <div class="col-md-4">
-          <p>Copyright © <span id="displayYear"></span> ParkVault</p>
-        </div>
-
-        <div class="col-md-4 text-center contact_item">
-          <i class="fa fa-envelope"></i> contact@parkvault.in
-        </div>
-
-        <div class="col-md-4 text-right contact_item">
-          <i class="fa fa-phone"></i> +91 9390808841
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-  <!-- end info_section -->
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://octo-corp.github.io/octo-corp/">OctoCorp Solutions</a>
-      </p>
-    </div>
-  </footer>
   <!-- footer section -->
 
   <!-- jQery -->
@@ -243,6 +804,22 @@
   </script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+
+
+
+<script>
+
+        AOS.init({
+            duration: 1500,
+            once: true
+        });
+
+        document.getElementById("displayYear").innerHTML = new Date().getFullYear();
+
+    </script>
+
+
+
 
 
 </body>
