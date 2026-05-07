@@ -536,6 +536,125 @@
             }
 
         }
+
+
+        /* ===== PARTNER BUTTON ===== */
+
+        .partner-btn {
+            background: #ff6b3d;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 15px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .partner-btn:hover {
+            background: #ffffff;
+            color: #1e5a63;
+        }
+
+        /* ===== POPUP MODAL ===== */
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+        }
+
+        .popup-box {
+            width: 400px;
+            max-width: 95%;
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            animation: popupFade 0.3s ease;
+        }
+
+        @keyframes popupFade {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .form-tabs {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .form-tabs button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: #eee;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .form-tabs button.active {
+            background: #1e5a63;
+            color: #fff;
+        }
+
+        .popup-form {
+            display: none;
+        }
+
+        .popup-form.active {
+            display: block;
+        }
+
+        .popup-form input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .popup-form button {
+            width: 100%;
+            padding: 12px;
+            background: #1e5a63;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .popup-form button:hover {
+            background: #ff6b3d;
+        }
     </style>
 
 </head>
@@ -554,7 +673,7 @@
 
                 <nav class="navbar navbar-expand-lg custom_nav-container">
 
-                    <a class="navbar-brand">
+                    <a class="navbar-brand" href="index.html">
 
                         <img src="images/logo.png" class="navbar-logo">
 
@@ -591,6 +710,12 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="partner-btn" onclick="openPopup()">
+                                    Partner With Us
+                                </button>
                             </li>
 
                         </ul>
@@ -953,7 +1078,7 @@
 
                     <ul class="footer_links">
                         <li><a href="index.html">Home</a></li>
-
+                        <!-- <li><a href="about.html">About Us</a></li> -->
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
 
@@ -981,8 +1106,7 @@
                     <h4 class="footer_title">Contact Info</h4>
 
                     <p>
-                        ParkVault Pvt Ltd,<br>
-                        15-906, VinayakaPuram <br>
+                        ParkVault Pvt Ltd, 64, 27th Main Road <br>
                         Chittoor, Andhra Pradesh <br>
                         India
                     </p>
@@ -998,7 +1122,8 @@
 
                         <a href="https://www.facebook.com/ParkVaultOfficial/"><i class="fa fa-facebook"></i></a>
                         <a href="https://www.instagram.com/parkvaultofficial/"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/parkvault-private-limited/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/company/parkvault-private-limited/"><i
+                                class="fa fa-linkedin"></i></a>
 
                     </div>
 
@@ -1033,27 +1158,93 @@
     </section>
 
 
-
-
-
-
-
-
     <footer class="footer_section">
 
         <div class="container">
 
-            <p><a href="https://octo-corp.github.io/octo-corp/">
+            <p>
 
                 © <span id="displayYear"></span> All Rights Reserved By OctoCorp Solutions
 
-            </a></p>
+            </p>
 
         </div>
 
     </footer>
 
+    <!-- ===== PARTNER POPUP ===== -->
 
+<div class="popup-overlay" id="popupOverlay">
+
+    <div class="popup-box">
+
+        <span class="close-popup" onclick="closePopup()">×</span>
+
+        <div class="form-tabs">
+
+            <button id="loginTab"
+                    class="active"
+                    type="button"
+                    onclick="showLogin()">
+                Login
+            </button>
+
+            <button id="signupTab"
+                    type="button"
+                    onclick="showSignup()">
+                Sign Up
+            </button>
+
+        </div>
+
+        <!-- LOGIN FORM -->
+
+        <form id="loginForm" class="popup-form active">
+
+            <input type="email"
+                   id="loginEmail"
+                   placeholder="Enter Email"
+                   required>
+
+            <input type="password"
+                   id="loginPassword"
+                   placeholder="Enter Password"
+                   required>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <!-- SIGNUP FORM -->
+
+        <form id="signupForm" class="popup-form">
+
+            <input type="text"
+                   id="signupName"
+                   placeholder="Enter Name"
+                   required>
+
+            <input type="email"
+                   id="signupEmail"
+                   placeholder="Enter Email"
+                   required>
+
+            <input type="password"
+                   id="signupPassword"
+                   placeholder="Enter Password"
+                   required>
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
 
 
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -1069,6 +1260,88 @@
         });
 
         document.getElementById("displayYear").innerHTML = new Date().getFullYear();
+
+
+        /* ===== POPUP FUNCTIONS ===== */
+
+        function openPopup() {
+            document.getElementById("popupOverlay").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+
+        function showLogin() {
+
+            document.getElementById("loginForm").classList.add("active");
+            document.getElementById("signupForm").classList.remove("active");
+
+            document.getElementById("loginTab").classList.add("active");
+            document.getElementById("signupTab").classList.remove("active");
+        }
+
+        function showSignup() {
+
+            document.getElementById("signupForm").classList.add("active");
+            document.getElementById("loginForm").classList.remove("active");
+
+            document.getElementById("signupTab").classList.add("active");
+            document.getElementById("loginTab").classList.remove("active");
+        }
+
+        /* ===== SIGNUP ===== */
+
+        document.getElementById("signupForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            const name = document.getElementById("signupName").value;
+            const email = document.getElementById("signupEmail").value;
+            const password = document.getElementById("signupPassword").value;
+
+            const userData = {
+                name,
+                email,
+                password
+            };
+
+            localStorage.setItem("partnerUser", JSON.stringify(userData));
+
+            alert("Signup Successful!");
+
+            this.reset();
+
+            showLogin();
+        });
+
+        /* ===== LOGIN ===== */
+
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            const storedUser = JSON.parse(localStorage.getItem("partnerUser"));
+
+            if (
+                storedUser &&
+                storedUser.email === email &&
+                storedUser.password === password
+            ) {
+
+                alert("Login Successful!");
+
+                closePopup();
+
+            } else {
+
+                alert("Invalid Email or Password");
+            }
+
+        });
 
     </script>
 
