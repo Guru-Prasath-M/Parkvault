@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Refund Policy - ParkVault</title>
+
+    <link rel="shortcut icon"
+          href="images/logo.png">
+
+    <link rel="stylesheet"
+          href="css/bootstrap.css">
+
+    <link rel="stylesheet"
+          href="css/font-awesome.min.css">
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            background:#f5f7fa;
+            font-family:Arial,sans-serif;
+        }
+
+        /* ===== HEADER ===== */
+
+        .top-header{
+            background:#1e5a63;
+            padding:18px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .top-header h2{
+            color:white;
+            margin:0;
+            font-size:28px;
+        }
+
+        .back-btn{
+            background:#ff6b3d;
+            color:white;
+            border:none;
+            padding:10px 22px;
+            border-radius:30px;
+            cursor:pointer;
+            font-weight:600;
+            transition:0.3s ease;
+        }
+
+        .back-btn:hover{
+            background:white;
+            color:#1e5a63;
+            transform:translateY(-3px);
+        }
+
+        /* ===== MAIN ===== */
+
+        .policy-container{
+            max-width:1200px;
+            margin:50px auto;
+            padding:0 20px;
+        }
+
+        .policy-box{
+            background:white;
+            border-radius:20px;
+            padding:50px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+            animation:fadeUp 1s ease;
+        }
+
+        .policy-box img{
+            width:120px;
+            display:block;
+            margin:0 auto 25px;
+            animation:floatLogo 4s ease-in-out infinite;
+        }
+
+        .policy-box h1{
+            text-align:center;
+            color:#1e5a63;
+            margin-bottom:20px;
+            font-weight:700;
+        }
+
+        .policy-subtitle{
+            text-align:center;
+            color:#666;
+            font-size:16px;
+            line-height:1.8;
+            margin-bottom:45px;
+        }
+
+        /* ===== SECTIONS ===== */
+
+        .policy-section{
+            margin-bottom:45px;
+            animation:fadeUp 1.2s ease;
+        }
+
+        .policy-section h3{
+            color:#1e5a63;
+            margin-bottom:18px;
+            font-size:25px;
+            font-weight:700;
+        }
+
+        .policy-section ul{
+            padding-left:20px;
+        }
+
+        .policy-section li{
+            color:#555;
+            line-height:1.9;
+            margin-bottom:16px;
+            font-size:16px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+
+        @keyframes fadeUp{
+
+            from{
+                opacity:0;
+                transform:translateY(40px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+        @keyframes floatLogo{
+
+            0%{
+                transform:translateY(0);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0);
+            }
+
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media(max-width:768px){
+
+            .top-header{
+                flex-direction:column;
+                gap:15px;
+                text-align:center;
+            }
+
+            .policy-box{
+                padding:30px 20px;
+            }
+
+            .policy-box h1{
+                font-size:30px;
+            }
+
+            .policy-section h3{
+                font-size:22px;
+            }
+
+            .policy-section li{
+                font-size:15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+
+    <div class="top-header">
+
+        <h2>ParkVault Refund Policy</h2>
+
+        <button class="back-btn"
+                onclick="window.location.href='partner-dashboard.html'">
+
+            Back
+
+        </button>
+
+    </div>
+
+    <!-- ===== MAIN ===== -->
+
+    <div class="policy-container">
+
+        <div class="policy-box">
+
+            <img src="images/logo.png"
+                 alt="ParkVault Logo">
+
+            <h1>
+                Refund Policy (B2B Framework)
+            </h1>
+
+            <p class="policy-subtitle">
+
+                This policy defines how cancellations and monetary refunds are synchronized
+                between ParkVault, the Property Partner, and the End User to safeguard
+                the Partner’s real-time slot occupancy revenue.
+
+            </p>
+
+            <!-- SECTION 1 -->
+
+            <div class="policy-section">
+
+                <h3>
+                    1. User Cancellation Matrix
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Drivers can cancel their parking reservation
+                        up to 1 hour before the scheduled booking start time
+                        for a full refund.
+                    </li>
+
+                    <li>
+                        In such cases, the reserved slot instantly updates
+                        as "Available" on the live slot radar system.
+                    </li>
+
+                    <li>
+                        No payout is generated for the Property Partner
+                        when a booking is cancelled within the free cancellation window.
+                    </li>
+
+                    <li>
+                        If a driver cancels less than 1 hour before the reservation
+                        or fails to occupy the reserved spot ("No-Show"),
+                        the full booking amount is charged.
+                    </li>
+
+                    <li>
+                        The Partner’s revenue share will be processed
+                        during the standard Net 15 payout cycle,
+                        after deducting the platform commission fee.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SECTION 2 -->
+
+            <div class="policy-section">
+
+                <h3>
+                    2. Operational Discrepancies & Reverse Chargebacks
+                </h3>
+
+                <ul>
+
+                    <li>
+                        If a hardware or software issue causes
+                        an inaccurate parking overstay calculation,
+                        the driver may file a dispute within 48 hours.
+                    </li>
+
+                    <li>
+                        Once verified through system logs,
+                        ParkVault may issue a dynamic refund to the driver.
+                    </li>
+
+                    <li>
+                        The refunded amount will be adjusted
+                        from the Partner’s active Net 15 settlement cycle.
+                    </li>
+
+                    <li>
+                        If a physical facility issue,
+                        property closure,
+                        blackout,
+                        or bottleneck prevents a pre-booked user from parking,
+                        the user will receive a full refund.
+                    </li>
+
+                    <li>
+                        In such cases,
+                        the platform commission fee
+                        will be debited from the Partner’s account balance.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

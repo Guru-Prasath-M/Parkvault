@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy - ParkVault</title>
+
+    <link rel="shortcut icon"
+          href="images/logo.png">
+
+    <link rel="stylesheet"
+          href="css/bootstrap.css">
+
+    <link rel="stylesheet"
+          href="css/font-awesome.min.css">
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            background:#f5f7fa;
+            font-family:Arial,sans-serif;
+        }
+
+        /* ===== HEADER ===== */
+
+        .top-header{
+            background:#1e5a63;
+            padding:18px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .top-header h2{
+            color:white;
+            margin:0;
+            font-size:28px;
+        }
+
+        .back-btn{
+            background:#ff6b3d;
+            color:white;
+            border:none;
+            padding:10px 22px;
+            border-radius:30px;
+            cursor:pointer;
+            font-weight:600;
+            transition:0.3s ease;
+        }
+
+        .back-btn:hover{
+            background:white;
+            color:#1e5a63;
+            transform:translateY(-3px);
+        }
+
+        /* ===== MAIN ===== */
+
+        .policy-container{
+            max-width:1200px;
+            margin:50px auto;
+            padding:0 20px;
+        }
+
+        .policy-box{
+            background:white;
+            border-radius:20px;
+            padding:50px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+            animation:fadeUp 1s ease;
+        }
+
+        .policy-box img{
+            width:120px;
+            display:block;
+            margin:0 auto 25px;
+            animation:floatLogo 4s ease-in-out infinite;
+        }
+
+        .policy-box h1{
+            text-align:center;
+            color:#1e5a63;
+            margin-bottom:20px;
+            font-weight:700;
+        }
+
+        .policy-subtitle{
+            text-align:center;
+            color:#666;
+            font-size:16px;
+            line-height:1.8;
+            margin-bottom:45px;
+        }
+
+        /* ===== SECTIONS ===== */
+
+        .policy-section{
+            margin-bottom:45px;
+            animation:fadeUp 1.2s ease;
+        }
+
+        .policy-section h3{
+            color:#1e5a63;
+            margin-bottom:18px;
+            font-size:25px;
+            font-weight:700;
+        }
+
+        .policy-section ul{
+            padding-left:20px;
+        }
+
+        .policy-section li{
+            color:#555;
+            line-height:1.9;
+            margin-bottom:16px;
+            font-size:16px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+
+        @keyframes fadeUp{
+
+            from{
+                opacity:0;
+                transform:translateY(40px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+        @keyframes floatLogo{
+
+            0%{
+                transform:translateY(0);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0);
+            }
+
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media(max-width:768px){
+
+            .top-header{
+                flex-direction:column;
+                gap:15px;
+                text-align:center;
+            }
+
+            .policy-box{
+                padding:30px 20px;
+            }
+
+            .policy-box h1{
+                font-size:30px;
+            }
+
+            .policy-section h3{
+                font-size:22px;
+            }
+
+            .policy-section li{
+                font-size:15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+
+    <div class="top-header">
+
+        <h2>ParkVault Privacy Policy</h2>
+
+        <button class="back-btn"
+                onclick="window.location.href='partner-dashboard.html'">
+
+            Back
+
+        </button>
+
+    </div>
+
+    <!-- ===== MAIN ===== -->
+
+    <div class="policy-container">
+
+        <div class="policy-box">
+
+            <img src="images/logo.png"
+                 alt="ParkVault Logo">
+
+            <h1>
+                Privacy Policy (For Parking Lot Owners)
+            </h1>
+
+            <p class="policy-subtitle">
+
+                ParkVault is committed to protecting partner,
+                supervisor, and driver information using secure
+                infrastructure and controlled access systems.
+
+            </p>
+
+            <!-- SECTION 1 -->
+
+            <div class="policy-section">
+
+                <h3>
+                    1. Data Collected from Partners
+                </h3>
+
+                <ul>
+
+                    <li>
+                        ParkVault collects official business registration details,
+                        GSTIN information, and bank account credentials
+                        for payout routing and financial settlements.
+                    </li>
+
+                    <li>
+                        Facility GIS location coordinates,
+                        digital floor plans,
+                        and slot naming architecture
+                        are collected during onboarding.
+                    </li>
+
+                    <li>
+                        Individual supervisor details,
+                        including names and mobile numbers,
+                        are registered to access ParkVault Pulse.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SECTION 2 -->
+
+            <div class="policy-section">
+
+                <h3>
+                    2. Driver-Partner Data Segregation (The Wall)
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Partners and supervisors are granted access
+                        only to information required
+                        for validating vehicle arrivals.
+                    </li>
+
+                    <li>
+                        Supervisors can view booking status,
+                        vehicle registration numbers,
+                        active slot coordinates,
+                        and QR token verification data.
+                    </li>
+
+                    <li>
+                        Full user names,
+                        phone numbers,
+                        and payment details
+                        are encrypted using SHA-256 protocols on Firebase.
+                    </li>
+
+                    <li>
+                        Partners are strictly prohibited
+                        from collecting or misusing driver information
+                        outside the operational check-in process.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SECTION 3 -->
+
+            <div class="policy-section">
+
+                <h3>
+                    3. System Data Logging & Analytics Transparency
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Data captured through supervisor interactions
+                        is securely mirrored across Firestore and BigQuery
+                        for operational analytics.
+                    </li>
+
+                    <li>
+                        ParkVault uses automated analytical insights
+                        to optimize peak-hour allocations,
+                        monitor revenue performance,
+                        and eliminate parking leakages.
+                    </li>
+
+                    <li>
+                        Corporate transaction logs,
+                        audit trails,
+                        and entry denial records
+                        are permanently retained
+                        in immutable ledgers.
+                    </li>
+
+                    <li>
+                        These records help resolve
+                        financial audits,
+                        operational disputes,
+                        and compliance investigations seamlessly.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

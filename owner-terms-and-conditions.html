@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Terms & Conditions - ParkVault</title>
+
+    <link rel="shortcut icon"
+          href="images/logo.png">
+
+    <link rel="stylesheet"
+          href="css/bootstrap.css">
+
+    <link rel="stylesheet"
+          href="css/font-awesome.min.css">
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            background:#f5f7fa;
+            font-family:Arial,sans-serif;
+        }
+
+        /* HEADER */
+
+        .top-header{
+            background:#1e5a63;
+            padding:18px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .top-header h2{
+            color:white;
+            margin:0;
+            font-size:28px;
+        }
+
+        .back-btn{
+            background:#ff6b3d;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:30px;
+            cursor:pointer;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .back-btn:hover{
+            background:white;
+            color:#1e5a63;
+        }
+
+        /* MAIN */
+
+        .terms-container{
+            max-width:1200px;
+            margin:50px auto;
+            padding:0 20px;
+        }
+
+        .terms-box{
+            background:white;
+            border-radius:20px;
+            padding:50px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+            animation:fadeUp 1s ease;
+        }
+
+        .terms-box img{
+            width:120px;
+            display:block;
+            margin:0 auto 25px;
+            animation:floatLogo 4s ease-in-out infinite;
+        }
+
+        .terms-box h1{
+            text-align:center;
+            color:#1e5a63;
+            margin-bottom:15px;
+            font-weight:700;
+        }
+
+        .terms-box .sub-text{
+            text-align:center;
+            color:#666;
+            margin-bottom:40px;
+            line-height:1.8;
+        }
+
+        .terms-section{
+            margin-bottom:40px;
+        }
+
+        .terms-section h3{
+            color:#1e5a63;
+            margin-bottom:15px;
+            font-size:24px;
+            font-weight:700;
+        }
+
+        .terms-section p{
+            color:#555;
+            line-height:1.9;
+            font-size:16px;
+            margin-bottom:15px;
+        }
+
+        .terms-section ul{
+            padding-left:20px;
+        }
+
+        .terms-section li{
+            margin-bottom:14px;
+            color:#555;
+            line-height:1.8;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes fadeUp{
+
+            from{
+                opacity:0;
+                transform:translateY(40px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+        @keyframes floatLogo{
+
+            0%{
+                transform:translateY(0);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0);
+            }
+
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .top-header{
+                flex-direction:column;
+                gap:15px;
+                text-align:center;
+            }
+
+            .terms-box{
+                padding:30px 20px;
+            }
+
+            .terms-box h1{
+                font-size:30px;
+            }
+
+            .terms-section h3{
+                font-size:22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div class="top-header">
+
+        <h2>ParkVault Terms & Conditions</h2>
+
+        <button class="back-btn"
+                onclick="window.location.href='partner-dashboard.html'">
+
+            Back
+
+        </button>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="terms-container">
+
+        <div class="terms-box">
+
+            <img src="images/logo.png"
+                 alt="ParkVault Logo">
+
+            <h1>
+                Terms & Conditions (B2B Property Partners)
+            </h1>
+
+            <p class="sub-text">
+
+                Effective Date: May 30, 2026 <br>
+
+                Platform Provider:
+                ParkVault Private Limited
+                (An OctoCorp Solutions Product) <br>
+
+                Governing Law:
+                Jurisdiction of Bengaluru, India
+
+            </p>
+
+            <!-- SECTION 1 -->
+
+            <div class="terms-section">
+
+                <h3>
+                    1. Scope of Service & Platform Model
+                </h3>
+
+                <ul>
+
+                    <li>
+                        ParkVault operates as a Platform-as-a-Service (PaaS)
+                        and smart parking aggregator.
+                    </li>
+
+                    <li>
+                        ParkVault digitizes parking assets owned or managed
+                        by the Partner and lists them for real-time booking.
+                    </li>
+
+                    <li>
+                        ParkVault facilitates connections between drivers
+                        and parking property owners.
+                    </li>
+
+                    <li>
+                        ParkVault does not own or operate physical parking
+                        facilities except for digital aggregation services.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SECTION 2 -->
+
+            <div class="terms-section">
+
+                <h3>
+                    2. Onboarding & Credentials
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Partners must complete the mandatory onboarding process.
+                    </li>
+
+                    <li>
+                        Property verification and technical integration
+                        are required before activation.
+                    </li>
+
+                    <li>
+                        Partners are responsible for maintaining
+                        secure login credentials.
+                    </li>
+
+                    <li>
+                        Actions performed using partner credentials
+                        will be treated as authorized.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SECTION 3 -->
+
+            <div class="terms-section">
+
+                <h3>
+                    3. Inventory Management & ParkVault Pulse
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Partners agree to synchronize parking inventory
+                        in real time through the ParkVault system.
+                    </li>
+
+                    <li>
+                        Supervisors must use ParkVault Pulse
+                        QR scanning during check-in and check-out.
+                    </li>
+
+                    <li>
+                        Any denied entry must include
+                        a mandatory reason in the app.
+                    </li>
+
+                    <li>
+                        Unjustified denials may result
+                        in platform penalties.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SECTION 4 -->
+
+            <div class="terms-section">
+
+                <h3>
+                    4. Financial Terms & Payouts
+                </h3>
+
+                <ul>
+
+                    <li>
+                        ParkVault charges a commission
+                        between 15% and 20%
+                        on successful transactions.
+                    </li>
+
+                    <li>
+                        Payouts are transferred within
+                        15 days of invoice generation.
+                    </li>
+
+                    <li>
+                        Automated billing applies
+                        for parking overstays.
+                    </li>
+
+                    <li>
+                        Revenue settlements are processed
+                        through the registered partner account.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SECTION 5 -->
+
+            <div class="terms-section">
+
+                <h3>
+                    5. Liability Disclaimer & Indemnification
+                </h3>
+
+                <ul>
+
+                    <li>
+                        ParkVault invoices drivers
+                        only for the right to occupy
+                        a designated parking slot.
+                    </li>
+
+                    <li>
+                        ParkVault assumes no liability
+                        for physical vehicle damage,
+                        theft, vandalism, or force majeure events.
+                    </li>
+
+                    <li>
+                        Partners are legally responsible
+                        for maintaining commercial insurance coverage.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

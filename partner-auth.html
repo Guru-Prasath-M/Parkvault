@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Partner Portal - ParkVault</title>
+
+    <link rel="shortcut icon" href="images/logo.png">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .auth-box {
+            width: 460px;
+            max-width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-box img {
+            width: 110px;
+        }
+
+        .logo-box h2 {
+            margin-top: 15px;
+            color: #1e5a63;
+            font-weight: 700;
+        }
+
+        .logo-box p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .form-tabs {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .form-tabs button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: #eee;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .form-tabs button.active {
+            background: #1e5a63;
+            color: white;
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .auth-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .auth-form button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #1e5a63;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .auth-form button:hover {
+            background: #ff6b3d;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-home a {
+            color: #1e5a63;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-home a:hover {
+            color: #ff6b3d;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-box">
+
+            <!-- LOGO -->
+
+            <div class="logo-box">
+
+                <img src="images/logo.png" alt="ParkVault Logo">
+
+                <h2>Partner Portal</h2>
+                <h2>Only for Partner's</h2>
+
+                <p>
+                    Login or create a partner account
+                    to manage your parking spaces.
+                </p>
+
+            </div>
+
+            <!-- TABS -->
+
+            <div class="form-tabs">
+
+                <button id="loginTab" class="active" type="button" onclick="showLogin()">
+
+                    Login
+
+                </button>
+
+                <button id="signupTab" type="button" onclick="showSignup()">
+
+                    Sign Up
+
+                </button>
+
+            </div>
+
+            <!-- LOGIN FORM -->
+
+            <form id="loginForm" class="auth-form active">
+
+                <input type="email" id="loginEmail" placeholder="Enter Email" required>
+
+                <input type="password" id="loginPassword" placeholder="Enter Password" required>
+
+                <button type="submit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <!-- SIGNUP FORM -->
+
+            <form id="signupForm" class="auth-form">
+
+                <!-- STEP 1 -->
+
+                <div id="signupStep1">
+
+                    <input type="text" id="signupName" placeholder="Enter Name" required>
+
+                    <input type="email" id="signupEmail" placeholder="Enter Email" required>
+
+                    <input type="password" id="signupPassword" placeholder="Enter Password" required>
+
+                    <button type="button" onclick="nextSignupStep()">
+
+                        Next
+
+                    </button>
+
+                </div>
+
+                <!-- STEP 2 -->
+
+                <div id="signupStep2" style="display:none;">
+
+                    <input type="text" id="signupAddress" placeholder="Enter Address" required>
+
+                    <input type="text" id="signupCity" placeholder="Enter City" required>
+
+                    <input type="text" id="signupState" placeholder="Enter State" required>
+
+                    <input type="tel" id="signupPhone" placeholder="Enter Phone Number" required>
+
+                    <button type="submit">
+
+                        Create Account
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- BACK -->
+
+            <div class="back-home">
+
+                <a href="index.html">
+
+                    ← Back To Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        /* ===== TAB SWITCH ===== */
+
+        function showLogin() {
+
+            document.getElementById("loginForm")
+                .classList.add("active");
+
+            document.getElementById("signupForm")
+                .classList.remove("active");
+
+            document.getElementById("loginTab")
+                .classList.add("active");
+
+            document.getElementById("signupTab")
+                .classList.remove("active");
+
+        }
+
+        function showSignup() {
+
+            document.getElementById("signupForm")
+                .classList.add("active");
+
+            document.getElementById("loginForm")
+                .classList.remove("active");
+
+            document.getElementById("signupTab")
+                .classList.add("active");
+
+            document.getElementById("loginTab")
+                .classList.remove("active");
+
+            document.getElementById("signupStep1")
+                .style.display = "block";
+
+            document.getElementById("signupStep2")
+                .style.display = "none";
+
+        }
+
+        /* ===== NEXT STEP ===== */
+
+        function nextSignupStep() {
+
+            const name =
+                document.getElementById("signupName").value.trim();
+
+            const email =
+                document.getElementById("signupEmail").value.trim();
+
+            const password =
+                document.getElementById("signupPassword").value.trim();
+
+            if (
+                name === "" ||
+                email === "" ||
+                password === ""
+            ) {
+
+                alert("Please fill all fields");
+
+                return;
+            }
+
+            document.getElementById("signupStep1")
+                .style.display = "none";
+
+            document.getElementById("signupStep2")
+                .style.display = "block";
+
+        }
+
+        /* ===== SIGNUP ===== */
+
+        document.getElementById("signupForm")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                const userData = {
+
+                    name:
+                        document.getElementById("signupName").value,
+
+                    email:
+                        document.getElementById("signupEmail").value,
+
+                    password:
+                        document.getElementById("signupPassword").value,
+
+                    address:
+                        document.getElementById("signupAddress").value,
+
+                    city:
+                        document.getElementById("signupCity").value,
+
+                    state:
+                        document.getElementById("signupState").value,
+
+                    phone:
+                        document.getElementById("signupPhone").value
+
+                };
+
+                localStorage.setItem(
+                    "partnerUser",
+                    JSON.stringify(userData)
+                );
+
+                alert(
+                    "Signup Successful! Please login to continue."
+                );
+
+                document.getElementById("signupForm").reset();
+
+                document.getElementById("signupStep1")
+                    .style.display = "block";
+
+                document.getElementById("signupStep2")
+                    .style.display = "none";
+
+                showLogin();
+
+            });
+
+        /* ===== LOGIN ===== */
+
+        document.getElementById("loginForm")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                const email =
+                    document.getElementById("loginEmail").value;
+
+                const password =
+                    document.getElementById("loginPassword").value;
+
+                const storedUser =
+                    JSON.parse(localStorage.getItem("partnerUser"));
+
+                if (
+                    storedUser &&
+                    storedUser.email === email &&
+                    storedUser.password === password
+                ) {
+
+                    window.location.href =
+                        "partner-dashboard.html";
+
+                }
+
+                else {
+
+                    alert("Invalid Email or Password");
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>
